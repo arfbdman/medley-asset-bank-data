@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medley 素材バンク</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Hiragino Sans", "Yu Gothic UI", -apple-system, sans-serif;
+      font-size: 14px; background: #f5f6f8; color: #1a1a1a; min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: #fff; border-bottom: 1px solid #e2e4e8;
+      padding: 0 24px; height: 56px; display: flex; align-items: center;
+      justify-content: space-between; position: sticky; top: 0; z-index: 50;
+    }
+    .header-left { display: flex; align-items: center; gap: 10px; }
+    .logo { font-size: 16px; font-weight: 800; color: #111; }
+    .logo-badge { font-size: 10px; font-weight: 700; background: #0ea5e9; color: #fff; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.06em; }
+    .header-hint { font-size: 11px; color: #aaa; }
+
+    /* ── CONTROLS ── */
+    .controls {
+      background: #fff; border-bottom: 1px solid #e2e4e8; padding: 12px 24px;
+      display: flex; flex-direction: column; gap: 10px; position: sticky; top: 56px; z-index: 40;
+    }
+    .search-input {
+      width: 100%; max-width: 420px; background: #f5f6f8; border: 1px solid #dfe1e5;
+      border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #1a1a1a;
+      outline: none; font-family: inherit;
+    }
+    .search-input:focus { border-color: #0ea5e9; background: #fff; }
+    .search-input::placeholder { color: #9ca3af; }
+    .chip-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+    .chip {
+      font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 16px;
+      border: 1px solid #dfe1e5; background: #fff; color: #666; cursor: pointer;
+      transition: all 0.12s; white-space: nowrap; font-family: inherit;
+    }
+    .chip:hover { border-color: #aaa; color: #333; }
+    .chip-active { background: #0ea5e9; border-color: #0ea5e9; color: #fff; font-weight: 700; }
+    .chip-prof-active { background: #e0f2fe; border-color: #0ea5e9; color: #0369a1; }
+    .chip-divider { width: 1px; height: 20px; background: #dfe1e5; margin: 0 4px; }
+    .result-info { font-size: 12px; color: #9ca3af; }
+
+    /* ── GRID ── */
+    .grid-container { padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
+    .asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    @media (max-width: 600px) {
+      .asset-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .controls { padding: 10px 16px; }
+      .grid-container { padding: 14px 16px; }
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: #fff; border: 1px solid #e8eaed; border-radius: 10px;
+      overflow: hidden; cursor: pointer; transition: box-shadow 0.15s, transform 0.1s; position: relative;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .card-thumb { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #f0f1f3; display: block; }
+    .card-thumb-ph { width: 100%; aspect-ratio: 1/1; background: #f0f1f3; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+    .card-body { padding: 10px 12px; }
+    .card-name { font-size: 12px; font-weight: 600; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .card-sub { font-size: 11px; color: #999; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .color-dot {
+      position: absolute; top: 8px; right: 8px; background: #f59e0b; color: #fff;
+      font-size: 11px; font-weight: 800; width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .type-badge { position: absolute; top: 8px; left: 8px; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: rgba(0,0,0,0.55); color: #fff; }
+
+    /* ── STATES ── */
+    .state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 24px; text-align: center; gap: 12px; color: #999; }
+    .hidden { display: none !important; }
+    .spinner { width: 28px; height: 28px; border: 3px solid #e2e4e8; border-top-color: #0ea5e9; border-radius: 50%; animation: spin 0.65s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100;
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+    }
+    .modal-card { background: #fff; border-radius: 14px; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+    .modal-img-wrap { position: relative; width: 100%; aspect-ratio: 1/1; background: #f0f1f3; }
+    .modal-img-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .color-alert { position: absolute; bottom: 0; left: 0; right: 0; background: #f59e0b; color: #000; font-size: 12px; font-weight: 700; text-align: center; padding: 8px 12px; }
+    .modal-body { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 14px; }
+    .modal-name { font-size: 16px; font-weight: 700; color: #111; }
+    .modal-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .modal-chip { font-size: 11px; padding: 3px 10px; background: #f0f1f3; border-radius: 12px; color: #666; }
+    .btn-download {
+      width: 100%; height: 44px; background: #0ea5e9; color: #fff; font-size: 14px; font-weight: 700;
+      border: none; border-radius: 8px; cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; transition: background 0.15s;
+    }
+    .btn-download:hover { background: #0284c7; }
+    .btn-cancel {
+      width: 100%; height: 40px; background: none; border: 1px solid #dfe1e5; color: #999;
+      font-size: 13px; border-radius: 8px; cursor: pointer; font-family: inherit;
+    }
+    .btn-cancel:hover { border-color: #aaa; color: #666; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <span class="logo">素材バンク</span>
+      <span class="logo-badge">Medley</span>
+    </div>
+    <span class="header-hint">素材の登録はスプレッドシートから</span>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="search-input" class="search-input" placeholder="検索（職種名・素材名で絞り込み）" oninput="renderGrid()" />
+    <div class="chip-row">
+      <button class="chip chip-active" data-type="all" onclick="setType(this)">すべて</button>
+      <button class="chip" data-type="写真" onclick="setType(this)">写真</button>
+      <button class="chip" data-type="イラスト" onclick="setType(this)">イラスト</button>
+      <button class="chip" data-type="背景" onclick="setType(this)">背景</button>
+      <div class="chip-divider"></div>
+      <span id="prof-chips"></span>
+      <span class="result-info" id="result-count"></span>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div id="asset-grid" class="asset-grid hidden"></div>
+    <div id="state-loading" class="state"><div class="spinner"></div><p>素材を読み込み中...</p></div>
+    <div id="state-empty" class="state hidden"><p style="font-size:28px">🔍</p><p>条件に合う素材が見つかりません</p></div>
+    <div id="state-error" class="state hidden"><p style="font-size:28px">⚠️</p><p id="error-msg">エラーが発生しました</p><button class="chip" onclick="loadAssets()">再試行</button></div>
+  </div>
+
+  <div id="modal-preview" class="modal-overlay hidden" onclick="if(event.target===this)closePreview()">
+    <div class="modal-card">
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="" />
+        <div id="color-alert" class="color-alert hidden">⚠️ イラスト素材 — 背景色に合わせてカラースキームを変更してください</div>
+      </div>
+      <div class="modal-body">
+        <p class="modal-name" id="modal-name"></p>
+        <div class="modal-chips" id="modal-chips"></div>
+        <a id="btn-download" class="btn-download" href="" target="_blank">↓ Google Driveで開いてダウンロード</a>
+        <button class="btn-cancel" onclick="closePreview()">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+var allAssets = [], allProfessions = [], activeType = "all", activeProf = null;
+
+loadAssets();
+
+function loadAssets() {
+  show("state-loading"); hide("asset-grid"); hide("state-error"); hide("state-empty");
+  fetch("data.json?t=" + Date.now())
+    .then(function(res) { if (!res.ok) throw new Error("データの取得に失敗しました"); return res.json(); })
+    .then(function(data) {
+      allAssets = data.assets || [];
+      allProfessions = data.professions || [];
+      renderProfChips();
+      hide("state-loading");
+      renderGrid();
+    })
+    .catch(function(err) {
+      hide("state-loading");
+      document.getElementById("error-msg").textContent = err.message;
+      show("state-error");
+    });
+}
+
+function setType(btn) {
+  document.querySelectorAll("[data-type]").forEach(function(b) { b.classList.remove("chip-active"); });
+  btn.classList.add("chip-active");
+  activeType = btn.dataset.type;
+  renderGrid();
+}
+
+function setProf(btn) {
+  var p = btn.dataset.prof;
+  if (activeProf === p) { activeProf = null; btn.classList.remove("chip-prof-active"); }
+  else {
+    document.querySelectorAll("[data-prof]").forEach(function(b) { b.classList.remove("chip-prof-active"); });
+    activeProf = p; btn.classList.add("chip-prof-active");
+  }
+  renderGrid();
+}
+
+function getFiltered() {
+  var q = (document.getElementById("search-input").value || "").toLowerCase().trim();
+  return allAssets.filter(function(a) {
+    var typeOk = activeType === "all" || a.type === activeType;
+    var profOk = !activeProf || a.professions.indexOf(activeProf) >= 0;
+    var qOk = !q || [a.name].concat(a.professions).concat([a.type]).some(function(s) { return s.toLowerCase().indexOf(q) >= 0; });
+    return typeOk && profOk && qOk;
+  });
+}
+
+function renderGrid() {
+  var list = getFiltered();
+  document.getElementById("result-count").textContent = list.length + " 件";
+  if (list.length === 0) { hide("asset-grid"); show("state-empty"); return; }
+  hide("state-empty"); show("asset-grid");
+
+  document.getElementById("asset-grid").innerHTML = list.map(function(a) {
+    return '<div class="card" onclick="openPreview(\'' + a.id + '\')">'
+      + (a.fileId
+        ? '<img class="card-thumb" src="https://lh3.googleusercontent.com/d/' + a.fileId + '=s400" alt="" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />'
+          + '<div class="card-thumb-ph" style="display:none">' + typeEmoji(a.type) + '</div>'
+        : '<div class="card-thumb-ph">' + typeEmoji(a.type) + '</div>')
+      + (a.needsRecolor ? '<div class="color-dot">!</div>' : '')
+      + '<div class="type-badge">' + a.type + '</div>'
+      + '<div class="card-body"><div class="card-name">' + a.name + '</div>'
+      + '<div class="card-sub">' + (a.professions.join(", ") || "—") + '</div></div></div>';
+  }).join("");
+}
+
+function renderProfChips() {
+  document.getElementById("prof-chips").innerHTML = allProfessions.map(function(p) {
+    return '<button class="chip" data-prof="' + p + '" onclick="setProf(this)">' + p + '</button>';
+  }).join("");
+}
+
+function openPreview(id) {
+  var a = allAssets.find(function(x) { return x.id === id; });
+  if (!a) return;
+  document.getElementById("modal-img").src = a.fileId ? "https://lh3.googleusercontent.com/d/" + a.fileId : "";
+  document.getElementById("modal-name").textContent = a.name;
+  a.needsRecolor ? show("color-alert") : hide("color-alert");
+  document.getElementById("modal-chips").innerHTML = [a.type].concat(a.professions).filter(Boolean).map(function(c) { return '<span class="modal-chip">' + c + '</span>'; }).join("");
+  document.getElementById("btn-download").href = a.fileId ? "https://drive.google.com/file/d/" + a.fileId + "/view" : "#";
+  show("modal-preview");
+}
+
+function closePreview() { hide("modal-preview"); }
+function show(id) { document.getElementById(id).classList.remove("hidden"); }
+function hide(id) { document.getElementById(id).classList.add("hidden"); }
+function typeEmoji(t) { return {"写真":"🖼️","イラスト":"🎨","背景":"🌅"}[t] || "📄"; }
+</script>
+</body>
+</html>
