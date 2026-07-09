@@ -1,0 +1,330 @@
+{
+  "assets": [
+    {
+      "id": "MED-001",
+      "name": "AdobeStock_190022669",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1OIhK11kJCO2yQu-Uka8aBRPz7XKTn2eV",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-002",
+      "name": "AdobeStock_994821979 [更新済み]",
+      "type": "イラスト",
+      "professions": [
+        "看護師",
+        "医師",
+        "歯科医師"
+      ],
+      "needsRecolor": true,
+      "fileId": "1WsFQ-z45hrYJUKVzWjEe-k_XEHZgmFPm",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-003",
+      "name": "AdobeStock_399210736 [更新済み]",
+      "type": "イラスト",
+      "professions": [
+        "医師",
+        "看護師",
+        "歯科衛生士"
+      ],
+      "needsRecolor": true,
+      "fileId": "12SKn6OlRQo2Pqyr-6YcOER4Yacywu2OX",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-004",
+      "name": "AdobeStock_425682397 [更新済み]",
+      "type": "イラスト",
+      "professions": [
+        "歯科衛生士"
+      ],
+      "needsRecolor": true,
+      "fileId": "1Mmk2xCW9wvs5AtrBnIqm5R-y0ggFB8ds",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-005",
+      "name": "pixta_85642842 [更新済み]",
+      "type": "イラスト",
+      "professions": [
+        "医師",
+        "歯科医師"
+      ],
+      "needsRecolor": true,
+      "fileId": "1c0r2pKeHD_Jk3oWJKX5ROMC2NVZBuE_n",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-006",
+      "name": "AdobeStock_618954869",
+      "type": "写真",
+      "professions": [
+        "薬剤師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1Ad500FuFP7kn2H1MHlLLlBolccD6ailO",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-007",
+      "name": "AdobeStock_519311088",
+      "type": "写真",
+      "professions": [
+        "歯科衛生士"
+      ],
+      "needsRecolor": false,
+      "fileId": "1I0FDsVM-Z7EloO9a2JyQ3jFKfNGZ4JWI",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-008",
+      "name": "pixta_95692014_L",
+      "type": "写真",
+      "professions": [
+        "医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "13sgEy0Arst-ufA7ofLDFpDCts5T5hiwD",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-009",
+      "name": "pixta_98647822_L",
+      "type": "写真",
+      "professions": [
+        "医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1rwoymTCGrmQtMBK4MniB7jxau4VKGu15",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-010",
+      "name": "AdobeStock_994821979",
+      "type": "イラスト",
+      "professions": [
+        "看護師",
+        "医師",
+        "歯科医師"
+      ],
+      "needsRecolor": true,
+      "fileId": "1dUDa3b9Fw3GzsmdCUjb6PvZ0Xj4l2iD-",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-011",
+      "name": "pixta_78403401_L",
+      "type": "写真",
+      "professions": [
+        "歯科医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1KPWHIwBgbgIflIWEYTSLEHWtnpf1TVWO",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-012",
+      "name": "pixta_93591320_L",
+      "type": "写真",
+      "professions": [
+        "歯科医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1vpsAU5sRcpHCUampkgtVJKPYkXrQHaRY",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-013",
+      "name": "pixta_65582280_L",
+      "type": "写真",
+      "professions": [
+        "歯科医師",
+        "歯科衛生士"
+      ],
+      "needsRecolor": false,
+      "fileId": "1Woe05xy6K9eNKbse2f5rMek34GL9ATf5",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-014",
+      "name": "AdobeStock_1619238189",
+      "type": "写真",
+      "professions": [
+        "歯科医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1HX0w__gAi2D9iUd6RqGKn6xvCJm0SZIR",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-015",
+      "name": "pixta_94855142_L",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1_hrNASc7KJ490Gu954ZYxezQITWB7_L0",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-016",
+      "name": "pixta_101871541_M",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1AaPNhj1megYQeWcosoGbeaGjmaT8RkS6",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-017",
+      "name": "pixta_101429216_L",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1gHa4w0Y0TPNuWw1Cm7uhSbP33SKeN56G",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-018",
+      "name": "pixta_103172116_L",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1LwoHYiDE6Zswpx8ln9fmkJ92oMIeu5LF",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-019",
+      "name": "pixta_94663586_L",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1wZi4L-KFbcFTGW1vHJq77Ki3jPYLB7sI",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-020",
+      "name": "pixta_101915190_L",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1g6zV8jHBQzEbxAnKL6QANomCmF56D5Qb",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-021",
+      "name": "AdobeStock_372450175",
+      "type": "写真",
+      "professions": [
+        "保育士",
+        "児童指導員"
+      ],
+      "needsRecolor": false,
+      "fileId": "1CG4Oj1gFLxVCdKJ-Os6yyG0gbpVhfWDz",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-022",
+      "name": "AdobeStock_528271220",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "18fQR4Ilgtcz_FQOVl_sQh7fmmCfMJ03-",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-023",
+      "name": "AdobeStock_453432379",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1j56BOTpq-ltRsvhErgyBSR5QbKtesF7r",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-024",
+      "name": "AdobeStock_537742914",
+      "type": "イラスト",
+      "professions": [
+        "汎用"
+      ],
+      "needsRecolor": true,
+      "fileId": "1t04Be_gUkUkSA0NDEWHFwHVMKe-NVFil",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-025",
+      "name": "AdobeStock_1247737299",
+      "type": "写真",
+      "professions": [
+        "保育士"
+      ],
+      "needsRecolor": false,
+      "fileId": "1qRBMQScXA6xJi3mBRAAY-spzg-I1FNTk",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-026",
+      "name": "p-max_歯科医師_202603_app_st_12001200_自分のペース_0313",
+      "type": "写真",
+      "professions": [
+        "児童指導員",
+        "歯科医師",
+        "歯科衛生士"
+      ],
+      "needsRecolor": false,
+      "fileId": "1-xZNPdFN-Yt3OfKZHpvLvpBxJMKt53QD",
+      "registeredBy": ""
+    },
+    {
+      "id": "MED-027",
+      "name": "p-max_看護師_202603_reg_st_12001200_一日流れ_0313",
+      "type": "写真",
+      "professions": [
+        "児童指導員",
+        "医師",
+        "歯科医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1vuLEj863G2YEdAItbi7FlQxsHd4qPAbw",
+      "registeredBy": "アリフ"
+    }
+  ],
+  "professions": [
+    "保育士",
+    "児童指導員",
+    "医師",
+    "歯科医師",
+    "歯科衛生士",
+    "汎用",
+    "看護師",
+    "薬剤師"
+  ]
+}
