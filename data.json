@@ -289,9 +289,87 @@
       "needsRecolor": false,
       "fileId": "1qRBMQScXA6xJi3mBRAAY-spzg-I1FNTk",
       "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-026",
+      "name": "看護師_イラスト",
+      "type": "イラスト",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": true,
+      "fileId": "1g6Lr78jkE76nXOvcaEsGCmNfmfpUvfLA",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-027",
+      "name": "看護師のコピー",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1GPr1CJ6zCZVW6sYQ_3af4AQAz8RUXk5E",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-028",
+      "name": "AdobeStock_1700588374",
+      "type": "写真",
+      "professions": [
+        "サービス管理者"
+      ],
+      "needsRecolor": false,
+      "fileId": "1Mq2oCL0ljVjnQEac4DTTF7bVokcU2-uU",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-029",
+      "name": "看護師_イラスト",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1xjrcOHVqXhZPGcgJBx1jhG6JDrqgCn1k",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-030",
+      "name": "看護師_イラスト",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1qmD9QP5JhUAVuvJzZZDXC9wEGhj8E1Yb",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-031",
+      "name": "看護師",
+      "type": "写真",
+      "professions": [
+        "看護師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1BioCMBBvHoDW6Ekgk2a_fGtOBhevD_JX",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-032",
+      "name": "AdobeStock_562067209",
+      "type": "写真",
+      "professions": [
+        "医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1G-XbINJAOlVstxPhqJ0Rd71AGh1MQlho",
+      "registeredBy": ""
     }
   ],
   "professions": [
+    "サービス管理者",
     "保育士",
     "児童指導員",
     "医師",
