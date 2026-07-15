@@ -1136,6 +1136,28 @@
       "needsRecolor": false,
       "fileId": "1CWe4aW-kgbf_Hp54TIXtKmZ6QtO4M_Y5",
       "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-096",
+      "name": "pixta_138658156 [更新済み]",
+      "type": "イラスト",
+      "professions": [
+        "汎用"
+      ],
+      "needsRecolor": true,
+      "fileId": "1-wu7Tr2hQeegxoXeorY33AfURWdT_GXO",
+      "registeredBy": "自動インポート"
+    },
+    {
+      "id": "MED-097",
+      "name": "AdobeStock_248416970",
+      "type": "写真",
+      "professions": [
+        "歯科医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "13m9Sfx7HbfLajAOqlauG8KEus3xsE-dQ",
+      "registeredBy": "自動インポート"
     }
   ],
   "professions": [
