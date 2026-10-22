@@ -473,18 +473,6 @@
       "registeredBy": "自動インポート"
     },
     {
-      "id": "MED-043",
-      "name": "GettyImages-886764968",
-      "type": "写真",
-      "professions": [
-        "歯科衛生士",
-        "歯科医師"
-      ],
-      "needsRecolor": false,
-      "fileId": "1WYRAfhsZOCtkxYt6jdl7zR7bEotu_xjc",
-      "registeredBy": "自動インポート"
-    },
-    {
       "id": "MED-044",
       "name": "レイヤー-02",
       "type": "写真",
@@ -1134,6 +1122,18 @@
       "needsRecolor": false,
       "fileId": "1N-sAQ3ec-G1-MYtjQNAjkkdVdSifrvqD",
       "registeredBy": "佐藤真優"
+    },
+    {
+      "id": "MED-095",
+      "name": "GettyImages-886764968 (1)",
+      "type": "写真",
+      "professions": [
+        "歯科衛生士",
+        "歯科医師"
+      ],
+      "needsRecolor": false,
+      "fileId": "1CD9Z1oPogzFSKEObhidhMBNsDSzsqlXt",
+      "registeredBy": "月野"
     }
   ],
   "professions": [
